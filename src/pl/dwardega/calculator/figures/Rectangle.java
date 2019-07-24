@@ -4,9 +4,11 @@ public class Rectangle extends Figure implements Printable {
     private double width, height;
 
 
-    public Rectangle(double height, double width)throws IllegalArgumentException{
-        if ( height <= 0.0 && width <= 0.0)
+    public Rectangle(double height, double width)throws IllegalArgumentException {
+        if (height <= 0.0 && width <= 0.0){
+            System.out.println(height + " " + width);
             throw new IllegalArgumentException("All sides - height and width - must be positive number");
+        }
         this.height = height;
         this.width = width;
     }

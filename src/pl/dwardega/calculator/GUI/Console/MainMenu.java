@@ -2,8 +2,9 @@ package pl.dwardega.calculator.GUI.Console;
 
 import java.util.Scanner;
 
-public class MainMenu {
-    public static void mainMenu(){
+public class MainMenu extends Menu {
+
+    public static void menu(){
         clearScreen();
         Scanner optionChooser = new Scanner(System.in);
 
@@ -14,16 +15,17 @@ public class MainMenu {
         while(stillWorking){
             System.out.println(mainMenuStatement());
             int option = optionChooser.hasNextInt() ? optionChooser.nextInt():-1;
+            System.out.println("test");
             switch (option) {
                 case 1:
                     // menu for figures
                     clearScreen();
-                    System.out.println("Figures");
+                    FigureMenu.menu();
                     break;
                 case 2:
                     // menu for prism
                     clearScreen();
-                    System.out.println("Prism");
+                    //PrismMenu.menu();
                     break;
                 case 0:
                     clearScreen();
@@ -40,14 +42,7 @@ public class MainMenu {
         }
     }
 
-    private static void clearScreen(){
-        System.out.print("\033[H\033[2J");
-        System.out.flush();
-    }
 
-    private static String wrongChoiceStatement(){
-        return "\nWrong choice! Please try again!\n";
-    }
 
     private static String  mainMenuStatement(){
         return "--- GEOMETRIC CALCULATOR ---"+
