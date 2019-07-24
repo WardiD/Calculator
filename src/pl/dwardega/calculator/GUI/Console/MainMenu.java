@@ -2,7 +2,7 @@ package pl.dwardega.calculator.GUI.Console;
 
 import java.util.Scanner;
 
-public class Menu {
+public class MainMenu {
     public static void mainMenu(){
         clearScreen();
         Scanner optionChooser = new Scanner(System.in);
