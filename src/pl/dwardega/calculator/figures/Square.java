@@ -24,6 +24,7 @@ public class Square extends Rectangle implements Printable {
         System.out.println(this);
     }
 
+    @Override
     public String toString(){
         return "Figure: Square" +
                 "\nSide: "+side+

@@ -21,6 +21,7 @@ public class Prism {
         return basis.calculatePerimeter()*height;
     }
 
+    @Override
     public String toString() {
         return "Prism basis:\n\n" +basis+
                 "\n\nPrism height: "+height+

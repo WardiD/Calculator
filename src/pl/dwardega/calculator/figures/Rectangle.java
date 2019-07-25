@@ -6,7 +6,6 @@ public class Rectangle extends Figure implements Printable {
 
     public Rectangle(double height, double width)throws IllegalArgumentException {
         if (height <= 0.0 && width <= 0.0){
-            System.out.println(height + " " + width);
             throw new IllegalArgumentException("All sides - height and width - must be positive number");
         }
         this.height = height;
@@ -28,6 +27,7 @@ public class Rectangle extends Figure implements Printable {
         System.out.println(this);
     }
 
+    @Override
     public String toString(){
         return "Figure: Rectangle" +
                 "\nSides: "+width+", "+height+

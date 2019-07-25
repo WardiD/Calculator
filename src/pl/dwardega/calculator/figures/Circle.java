@@ -24,6 +24,7 @@ public class Circle extends Figure implements Printable {
         System.out.println(this);
     }
 
+    @Override
     public String toString(){
         return "Figure: Circle" +
                 "\nRadius: "+radius+
