@@ -1,8 +1,9 @@
 package pl.dwardega.calculator.figures;
 
 public class Triangle extends Figure implements Printable{
-
+    // Angle values should be in radians.
     private double sideA,sideB,sideC;
+    // angles in radians
     private double angleAB, angleBC, angleAC;
 
     /* char options:
@@ -87,5 +88,12 @@ public class Triangle extends Figure implements Printable{
                 "\nPerimeter: "+calculatePerimeter();
     }
 
+    public static double toDegree(double radians){
+        return Math.toDegrees(radians);
+    }
+
+    public static double toRadians(double degrees){
+        return Math.toRadians(degrees);
+    }
 
 }

@@ -1,4 +1,6 @@
-package pl.dwardega.calculator.figures;
+package test;
+
+import pl.dwardega.calculator.figures.Triangle;
 
 import static org.junit.jupiter.api.Assertions.*;
 // TO DO
@@ -40,12 +42,18 @@ class TriangleTest {
         });
     }
 
+    // To DO
     @org.junit.jupiter.api.Test
     public void TestCalculateSideFromCosinesLaw(){
-        assertEquals(Triangle.calculateSideFromCosinesLaw(5.0,4.0,30.0),Math.sqrt(13));
+        double side1 = 4.0;
+        double side2 = 5.0;
+        double angle = Math.toRadians(30.0);
+        //Math.sqrt(Math.pow(side1,2.0) + Math.pow(side2,2.0) - 2.0*side1*side2*Math.cos(angle))
+        assertEquals(Triangle.calculateSideFromCosinesLaw(5.0,4.0,30.0),26.0176);
+
     }
 
-
+    // TO DO
 
 
 }
